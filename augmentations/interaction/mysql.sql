@@ -3,10 +3,18 @@ CREATE TABLE IF NOT EXISTS interaction (
   interaction_type VARCHAR(50) NOT NULL,
   created_at DATETIME NOT NULL,
   created_at_unix INTEGER NOT NULL,
-  name VARCHAR(255) DEFAULT NULL, 
-  username VARCHAR(255) DEFAULT NULL,
-  is_retweet SMALLINT DEFAULT NULL,
-  twitter_lang VARCHAR(50) DEFAULT NULL,
+  geo_latitude DOUBLE DEFAULT NULL,
+  geo_longitude DOUBLE DEFAULT NULL,
+  content TEXT DEFAULT NULL,
+  title VARCHAR(255) DEFAULT NULL,
+  link VARCHAR(255) DEFAULT NULL,
+  source TEXT DEFAULT NULL,
+  subtype TEXT DEFAULT NULL,
+  author_avatar VARCHAR(255) DEFAULT NULL,
+  author_name VARCHAR(255) DEFAULT NULL,
+  author_username VARCHAR(255) DEFAULT NULL,
+  author_language VARCHAR(64) DEFAULT NULL,
+  author_link VARCHAR(255) DEFAULT NULL,
   first_tag VARCHAR(50) DEFAULT NULL,
   PRIMARY KEY (interaction_id)
 )
@@ -58,3 +66,16 @@ COLLATE = utf8_general_ci;
 CREATE INDEX mentions_interaction_id_idx ON mentions (interaction_id);
 CREATE INDEX mentions_interaction_type_idx ON mentions (interaction_type);
 CREATE INDEX mentions_created_at_idx ON mentions (created_at);
+
+CREATE TABLE IF NOT EXISTS mention_ids (
+  interaction_id VARCHAR(64) NOT NULL,
+  interaction_type VARCHAR(50) NOT NULL,
+  created_at DATETIME NOT NULL,
+  mention_id VARCHAR(255) NULL
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+CREATE INDEX mention_ids_interaction_id_idx ON mentions (interaction_id);
+CREATE INDEX mention_ids_interaction_type_idx ON mentions (interaction_type);
+CREATE INDEX mention_ids_created_at_idx ON mentions (created_at);
