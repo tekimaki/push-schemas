@@ -1,4 +1,3 @@
-
 CREATE TABLE newscred (
   interaction_id VARCHAR(64) PRIMARY KEY,
   created_at DATETIME NOT NULL,
@@ -41,7 +40,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;
 CREATE INDEX newscred_created_at_idx ON newscred (created_at);
-
 
 CREATE TABLE newscred_authors (
   interaction_id VARCHAR(64) NOT NULL,
