@@ -1,6 +1,5 @@
 CREATE TABLE twitter (
   interaction_id VARCHAR(64) PRIMARY KEY,
-  interaction_type VARCHAR(64) NOT NULL,
   created_at TIMESTAMP NOT NULL,
   author_name text DEFAULT NULL,
   author_username text DEFAULT NULL,
