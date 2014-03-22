@@ -19,5 +19,5 @@ CREATE TABLE twitter (
   retweeted_author_screen_name VARCHAR(64) DEFAULT NULL,
   retweet_count INT DEFAULT NULL
 );
-CREATE INDEX twitter_interaction_type_idx ON twitter (interaction_type);
+CREATE INDEX twitter_interaction_id_idx ON twitter (interaction_id);
 CREATE INDEX twitter_created_at_idx ON twitter (created_at);

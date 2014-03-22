@@ -22,5 +22,5 @@ CREATE TABLE twitter (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;
-CREATE INDEX twitter_interaction_type_idx ON twitter (interaction_type);
+CREATE INDEX twitter_interaction_id_idx ON twitter (interaction_id);
 CREATE INDEX twitter_created_at_idx ON twitter (created_at);
