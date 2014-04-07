@@ -6,7 +6,8 @@ CREATE TABLE lexisnexis (
   language VARCHAR(64) DEFAULT NULL,
   load_date DATETIME DEFAULT NULL,
   docinfo_lnlni VARCHAR(255) DEFAULT NULL,
-  source_name VARCHAR(64) DEFAULT NULL
+  source_name VARCHAR(64) DEFAULT NULL,
+  source_link VARCHAR(255) DEFAULT NULL
 )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8

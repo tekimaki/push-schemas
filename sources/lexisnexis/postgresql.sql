@@ -6,7 +6,8 @@ CREATE TABLE lexisnexis (
   language VARCHAR(64) DEFAULT NULL,
   load_date DATETIME DEFAULT NULL,
   docinfo_lnlni TEXT DEFAULT NULL,
-  source_name VARCHAR(64) DEFAULT NULL
+  source_name VARCHAR(64) DEFAULT NULL,
+  source_link TEXT DEFAULT NULL
 );
 CREATE INDEX lexisnexis_interaction_id_idx ON lexisnexis (interaction_id);
 CREATE INDEX lexisnexis_created_at_idx ON lexisnexis (created_at);
