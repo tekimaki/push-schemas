@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS wordpress (
   updated_at TIMESTAMP DEFAULT NULL,
   published TIMESTAMP DEFAULT NULL,
   link TEXT DEFAULT NULL,
-  in_reply_to TEXT DEFAULT NULL,
+  inreplyto TEXT DEFAULT NULL,
   comment_id TEXT DEFAULT NULL  
 );
 CREATE INDEX wordpress_interaction_id_idx ON wordpress (interaction_id);
