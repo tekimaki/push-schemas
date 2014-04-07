@@ -21,7 +21,8 @@ CREATE TABLE IF NOT EXISTS wordpress_author (
   created_at TIMESTAMP DEFAULT NULL,
   id TEXT DEFAULT NULL,
   username TEXT DEFAULT NULL,
-  link TEXT DEFAULT NULL
+  link TEXT DEFAULT NULL,
+  avatar VARCHAR(255) DEFAULT NULL
 );
 CREATE INDEX wordpress_author_interaction_id_idx ON wordpress_author (interaction_id);
 CREATE INDEX wordpress_author_created_at_idx ON wordpress_author (created_at);
@@ -49,7 +50,12 @@ CREATE TABLE IF NOT EXISTS wordpress_article (
   comment_count INTEGER DEFAULT NULL, 
   link TEXT DEFAULT NULL,
   blog_id TEXT DEFAULT NULL,
-  post_id TEXT DEFAULT NULL
+  post_id TEXT DEFAULT NULL,
+  author_avatar VARCHAR(255) DEFAULT NULL,
+  author_id TEXT DEFAULT NULL,
+  author_username TEXT DEFAULT NULL,
+  id TEXT DEFAULT NULL,
+  lang VARCHAR(50) DEFAULT NULL
 );
 CREATE INDEX wordpress_article_interaction_id_idx ON wordpress_article (interaction_id);
 CREATE INDEX wordpress_article_created_at_idx ON wordpress_article (created_at);
